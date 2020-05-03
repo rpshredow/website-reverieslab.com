@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Reveries Lab! - Research</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+			<h1 id="colorlib-logo"><a href="index.html">reveries lab<span>.</span></a></h1>
+			<!-- <p>where daydreams become reality</p> -->
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<!-- <h6 class="mb-4">Welcome to Reveries Lab</h6> -->
+					<li><a href="index.html">Home</a></li>
+					<br>
+					<h5 style="color:black"><b><u>Projects</u></b></h5>
+					<li><a href="projects.html">3D Terrain</a></li>
+					<li><a href="cluster.html">Raspberry Pi Cluster</a></li>
+					<!-- <li><a href="#">Kubernetes Pi Cluster</a></li>
+					<li><a href="#">Spark Pi Cluster</a></li> -->
+					<h5 style="color:black"><b><u>Research</u></b></h5>
+					<li class="colorlib-active"><a href="research.html">FPGA Neural Net</a></li>
+					<br>
+					<br>
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+				<ul>
+					<li><a href="https://www.facebook.com/robert.shredow"><i class="icon-facebook"></i></a></li>
+					<li><a href="https://www.instagram.com/rshredow/"><i class="icon-instagram"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/robert-shredow-37995393/"><i class="icon-linkedin"></i></a></li>
+					<li><a href="https://github.com/rpshredow"><i class="icon-github"></i></a></li>
+				</ul>
+			</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main">
+			<!--
+			<div class="hero-wrap js-fullheight" style="background-image: url(images/neuralnets.jpg);" data-stellar-background-ratio="0.5">
+				<div class="overlay"></div>
+				<div class="js-fullheight d-flex justify-content-center align-items-center">
+					<div class="col-md-8 text text-center">
+						<div class="desc">
+							<h1 class="mb-4">Research</h1>
+							<p><a href="index" class="btn-custom mr-2">Home <span class="ion-ios-arrow-forward"></span></a> <a href="index" class="btn-custom mr-2">Blog <span class="ion-ios-arrow-forward"></span></a> <a href="index" class="btn-custom">Single <span class="ion-ios-arrow-forward"></span></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			-->
+			<section class="ftco-section">
+	    	<div class="container">
+	    		<div class="row">
+	    			<div class="col-lg-8 ftco-animate">
+	            <h2 class="mb-3 font-weight-bold">FPGA Neural Network using a Tally Numbering System</h2>
+				
+	            <p style="color:black">My Masters Thesis is to implement a neural network on an FPGA (Field Programmable Gate Array) and do so using a unique numbering and math system thought up by my graduate advisor Kosuke Imamura. The thesis will be using the <a href="http://yann.lecun.com/exdb/mnist/" target="_blank">MNIST Dataset,</a> which is a dataset of handwritten numbers 0 through 9 used for experimenting with machine learning. The neural network architecture will either be a <a href="https://en.wikipedia.org/wiki/Multilayer_perceptron" target="_blank">multi-layer perceptron</a> or its variant a <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network" target="_blank">convolutional neural network</a> which is generally used for image recognition.</p>
+	            <h5 class="mb-3 mt-5 font-weight-bold">MNIST Dataset</h5>
+	            <p>
+	              <img src="images/mnist_plot.png" alt="" class="img-fluid">
+	            </p>
+	            <p style="color:black">This data set includes 60,000 training images and 10,000 testing images all include labels with what the number should be. Each image in the MNIST dataset is 28 x 28 pixels using 8-bit greyscale.</p>
+	            <h5 class="mb-3 mt-5 font-weight-bold">Tally Numbering System</h5>
+	            <p style="color:black">Instead of using the normal <a href="https://en.wikipedia.org/wiki/Binary_number" target="_blank">binary numbering system</a> and <a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic" target="_blank">floating point</a> or <a href="https://en.wikipedia.org/wiki/Fixed_point_(mathematics)" target="_blank">fixed point</a> math this neural network will be implemented using a Tally Numbering System. The essence of the tally numbering systems is that the number of 1s in a bit string represents the number. The purpose of this numbering system and the associated math is to decrease computation time / hardware used / energy used over conventional floating point and fixed point operations.</p>
+	            <p style="color:black">00011111 = 5.</p> 
+	            <p style="color:black">The most significant bit represents the sign, 0 for positive and 1 for negative.</p> 
+	            <p style="color:black">00011111 = 5</p>
+	            <p style="color:black">10001111 = -4. </p>
+	            <p style="color:black">Addition and Subtraction is accomplished by bit shifting left or right. Bit shifting is computationally cheap and can be implemented with just a barrel shifter. As opposed to all the logic required for basic addition and subtraction in floating and fixed point.</p>
+	            <p style="color:black">00001111 + 00000011 = 00111111 (4 + 2 = 6) the result is just 4 bit shifted to the left 2 spots and bitwise OR with 2.</p>
+				<p style="color:black">Multiplication and Division is done by reflecting the bit string through a matrix with a slope of the number that is being multiplied or divided by. This is implemented using a look up table because implementing an efficient line drawing algorithm would require multiplier blocks where the point of the talley numbering system is to reduce or eliminate the used of multiplier blocks to increase speed and reduce hardware used.</p>
+	            <p>
+	              <img src="images/tally_mult.png" alt="" class="img-fluid">
+	            </p>
+	            <h6 class="mb-3 mt-5 font-weight-bold">Fractional Representation using Tally Numbering System</h6>
+				<p style="color:black">Fractional number representation, which I created, is done by picking a number for the total number of bits to be used such as 16, plus a signed bit. Note that choosing a large number may consume a lot of hardware and choosing a small number may reduce accuracy and cause errors. When all 16 bits are equal to 1 then that represents a 1, when all bits are 0 then that represents a 0, everything in between represents fractions such as eight 0s and eight 1s is equal to 0.5 and twelve 0s and four 1s equals 0.25.</p>
+				<p style="color:black">1111111111111111 = 1</p>
+				<p style="color:black">0000000000000000 = 0</p>
+				<p style="color:black">0000000011111111 = 8</p>
+				<p style="color:black">0000000000001111 = 0.25</p>
+				<p style="color:black">Mathematical Operations are the same as before. Fitting data to this system is just rounding to the nearest fraction.</p>
+				<h5 class="mb-3 mt-5 font-weight-bold">Neural Network Architecture</h5>
+				<p style="color:black">Currently I'm working on a multi-layer perceptron to implement on the FPGA. The perceptron will consist of 3 layers, and input layer of 784 nodes because each MNIST image is 28x28 which equals 784, the hidden layers is 100 which is arbitrary as hyper parameters in machine learning are and the output layer is 10 nodes for each of the 10 numbers.</p>
+				<p>
+	              <img src="images/mnist_2layers.png" alt="" class="img-fluid">
+	            </p>
+	            <p style="color:black">The neural net will be a basic feed forward network at first using pre calculated weights used from a separate multi-layer perceptron that was trained on the MNIST data.</p>
+	          </div> <!-- .col-md-8 -->
+
+					<!-- sidebar stuff -->
+					
+	    		</div>
+	    	</div>
+	    </section>
+	    <footer class="ftco-footer ftco-bg-dark ftco-section">
+	      <div class="container px-md-5">
+	        <div class="row mb-5">
+	          <div class="col-md">
+	            <div class="ftco-footer-widget mb-4">
+	            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+	            	<div class="block-23 mb-3">
+		              <ul>
+		                <li><span class="icon icon-map-marker"></span><span class="text">906 Washington St. Cheney, Washington, USA</span></li>
+		                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+1 (509) 294-5271</span></a></li>
+		                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">rshredow@gmail.com</span></a></li>
+		              </ul>
+		            </div>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="row">
+	          <div class="col-md-12">
+
+	            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	          </div>
+	        </div>
+	      </div>
+	    </footer>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
